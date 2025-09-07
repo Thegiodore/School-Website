@@ -6,6 +6,6 @@ Framework - Django REST
 pip install django
 pip install djangorestframework
 
-Added .venv
+Added .venv (activate when installing packages)
 To activate
 in command prompt: .venv\Scripts\activate
