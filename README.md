@@ -7,5 +7,5 @@ pip install django
 pip install djangorestframework  
 
 Added .venv (activate when installing packages)  
-To activate  
+To activate:    
 in command prompt: .venv\Scripts\activate  
