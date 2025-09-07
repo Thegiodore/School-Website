@@ -1,11 +1,11 @@
 # School-Website
-A sample design of a School Website
+A sample design of a School Website  
 
-Using:
-Framework - Django REST
-pip install django
-pip install djangorestframework
+Using:  
+Framework - Django REST  
+pip install django  
+pip install djangorestframework  
 
-Added .venv (activate when installing packages)
-To activate
-in command prompt: .venv\Scripts\activate
+Added .venv (activate when installing packages)  
+To activate  
+in command prompt: .venv\Scripts\activate  
