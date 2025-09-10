@@ -1,10 +1,28 @@
+.custom-navbar,
+.scrolled-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 2147483646; /* keeps navbar on top of everything */
+  pointer-events: auto;
+  transition: all 0.3s ease-in-out;
+}
+
 .custom-navbar {
   background-color: #151655; /* background */
-  transition: all 0.3s ease-in-out;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
+}
+
+.scrolled-navbar {
+  background-color: #151655;
+  color: #333;
+  position: fixed !important;
+  top: 15px; /* floating effect */
+  width: 90%;
+  left: 5%;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .logo {
@@ -23,17 +41,6 @@
   white-space: nowrap;
 }
 
-.scrolled-navbar {
-  background-color: #151655;
-  color: #333;
-  position: fixed !important;
-  top: 15px; /* floating effect */
-  width: 90%;
-  left: 5%;
-  border-radius: 20px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
-}
 
 .nav-link {
   color: #ffffff; /* for text */
