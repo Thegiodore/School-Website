@@ -5,3 +5,75 @@
   color: #151655;
   margin-bottom: 20px;
 }
+
+/* form container */
+.contact-form {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* inputs + textarea */
+.contact-form .form-control {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 12px;
+  transition: all 0.3s ease;
+}
+
+.contact-form .form-control:focus {
+  border-color: #151655;
+  box-shadow: 0 0 6px rgba(21, 22, 85, 0.3);
+}
+
+/* button */
+.contact-form .btn-primary {
+  background-color: #151655;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 25px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.contact-form .btn-primary:hover {
+  background-color: #f0a500;
+  color: #151655;
+}
+
+/* status message */
+.contact-form + p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #151655;
+}
+
+/* heading questions */
+.contact-subtitle {
+  font-family: 'Graduate', serif;
+  font-size: 1.8rem;
+  color: #151655;
+  text-align: center;
+  margin: 30px 0 15px;
+}
+
+/* subtext under heading */
+.contact-subtext {
+  font-size: 1.1rem;
+  color: #555;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.contact-map {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  border-radius: 12px;
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
