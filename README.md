@@ -20,4 +20,3 @@ added contact_form in API
 need to create 2 gmails (receiver and sender) for settings.py under main app (SchoolWebsite)
 
 added news page
--need to create superuser
