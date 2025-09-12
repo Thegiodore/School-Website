@@ -1,7 +1,87 @@
-.program-category {
+/* Program Cards */
+.program-img {
+  height: 180px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.program-card {
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.program-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.program-category { /* Page title */
   font-family: 'Graduate', serif;
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   font-weight: bold;
   color: #151655;
   margin-bottom: 20px;
+}
+
+/* Sub-titles */
+.section-title {
+  font-family: 'Graduate', serif;
+  font-size: 1.8rem;
+  color: #151655;
+  text-align: center;
+}
+
+/* card title */
+.card-title {
+  font-family: 'Graduate', serif;
+  font-size: 1.25rem;
+  color: #151655 !important;
+}
+
+/* Staff Cards */
+.staff-card {
+  background: #f9f9ff !important;
+  border-radius: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: none !important;
+}
+
+.staff-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.staff-role {
+  font-family: 'Graduate', serif;
+  font-weight: bold;
+  color: #2c2c6c;
+  margin-bottom: 5px;
+}
+
+.staff-name {
+  font-size: 1rem;
+  color: #151655;
+  margin-bottom: 5px;
+}
+
+.staff-email {
+  font-size: 0.85rem;
+  color: #555;
+  font-style: italic;
+}
+
+/*only for Graduate school*/
+.program-icon {
+  font-size: 3rem;
+  color: #151655;
+  margin-bottom: 5px;
+}
+
+/* Section subtitle (school names) */
+.section-subtitle {
+  font-family: 'Graduate', serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2c2c6c;
 }
