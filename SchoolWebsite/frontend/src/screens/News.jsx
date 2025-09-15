@@ -9,7 +9,9 @@ const News = () => {
       <Header />
       <div className="container mt-4">
         <h1 className="news-title">University News</h1>
-        <p>Latest updates and announcements from Theory University.</p>
+        <p style={{textAlign: "center" }}>
+          Latest updates and announcements from Theory University.
+        </p>
       </div>
       <Footer />
     </div>

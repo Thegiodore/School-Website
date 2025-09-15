@@ -7,7 +7,7 @@ const AboutUs = () => {
   return (
     <div>
       <Header />
-      <div className="container mt-4 about-container">
+      <div className="container mt-3 about-container">
         <h1 className="about-title">About Theory University</h1>
         <p className="about-description">
           Theory University is a prestigious institution dedicated to academic
