@@ -126,7 +126,7 @@
   text-decoration: underline;
 }
 
-/*button for contact us*/
+/*button for contact us and news*/
 .homepage-section .btn-primary {
   background-color: #151655;
   border: none;
@@ -154,4 +154,65 @@
   padding: 12px 16px;
   font-size: 1.1rem;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+/*news card*/
+.news-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.news-card {
+  width: 300px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.news-card-img-top {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.news-card-body {
+  padding: 15px;
+  text-align: left;
+  flex-grow: 1;
+}
+
+.news-card-body h5 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #151655;
+  margin-bottom: 10px;
+}
+
+.news-card-body p {
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.4;
+  margin-bottom: 0;
+}
+
+.news-card-footer {
+  padding: 10px 15px;
+  background-color: #f9f9f9;
+  font-size: 0.8rem;
+  color: #666;
+  text-align: right;
+  border-top: 1px solid #eee;
 }

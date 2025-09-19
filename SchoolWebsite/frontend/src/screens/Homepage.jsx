@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "../css/Homepage.css";
 import { Link } from "react-router-dom";
 
 const Homepage = () => {
+  const [news, setNews] = useState([]);
+
+  useEffect(() => {
+    fetch("http://127.0.0.1:8000/news/") // adjust endpoint ulit if mali
+      .then((res) => res.json())
+      .then((data) => {
+        setNews(data.slice(0, 3)); // show only first 3
+      })
+      .catch((error) => console.error("Error fetching news:", error));
+  }, []);
+
   return (
     <div>
       <Header />
@@ -28,6 +39,7 @@ const Homepage = () => {
         </div>
       </div>
 
+      {/* ACADEMIC PROGRAMS */}
       <div className="homepage container mt-4">
         <section className="homepage-section">
           <h2 className="homepage-sub-titles">Academic Programs</h2>
@@ -71,6 +83,7 @@ const Homepage = () => {
           </div>
         </section>
 
+        {/* CAMPUS LIFE */}
         <section className="homepage-section">
           <h2 className="homepage-sub-titles">Campus Life</h2>
           <p>
@@ -142,6 +155,7 @@ const Homepage = () => {
           </button>
       </div>
 
+        {/* NEWS & EVENTS */}
         <section className="homepage-section">
           <h2 className="homepage-sub-titles">News & Events</h2>
           <p>
@@ -149,8 +163,45 @@ const Homepage = () => {
             exciting events happening across our university. Theory University
             is always buzzing with activity!
           </p>
+
+          <div className="row">
+            {news.map((article) => (
+              <div className="col-md-4 mb-4" key={article.id}>
+                <div className="news-card h-100 shadow-sm">
+                  {article.image && (
+                    <img
+                      src={`http://127.0.0.1:8000${article.image}`}
+                      className="card-img-top"
+                      alt={article.title}
+                    />
+                  )}
+                  <div className="news-card-body">
+                    <h5 className="card-title">{article.title}</h5>
+                    <p className="card-text">
+                      {article.content.length > 100
+                        ? article.content.slice(0, 100) + "..."
+                        : article.content}
+                    </p>
+                  </div>
+                  <div className="news-card-footer">
+                    <small className="text-muted">
+                      {new Date(article.publication_date).toLocaleDateString()}
+                    </small>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-3 mb-3">
+            <Link to="/news" className="btn btn-primary rounded-pill">
+              More News →
+            </Link>
+          </div>
+
         </section>
 
+        {/* CONTACT */}
         <section className="homepage-section">
           <h2 className="homepage-sub-titles">Contact Us</h2>
           <p>
