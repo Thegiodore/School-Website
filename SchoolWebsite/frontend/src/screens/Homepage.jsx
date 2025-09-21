@@ -4,12 +4,13 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "../css/Homepage.css";
 import { Link } from "react-router-dom";
+import BASE_URL from "../config"; 
 
 const Homepage = () => {
   const [news, setNews] = useState([]);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/news/") // adjust endpoint ulit if mali
+    fetch(`${BASE_URL}/api/news/`)
       .then((res) => res.json())
       .then((data) => {
         setNews(data.slice(0, 3)); // show only first 3

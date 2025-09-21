@@ -22,19 +22,22 @@ from django.conf.urls.static import static
 import os
 from django.views.static import serve
 from django.urls import re_path
+from django.views.generic import TemplateView
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('api/', include('api.urls')),
-    # Serve the React app
-    path('', home, name='home'),
-] 
-# Serve static files from the React build directory
-if settings.DEBUG:
-    urlpatterns += [
-        re_path(r'^static/(?P<path>.*)$', serve, {'document_root': os.path.join(settings.BASE_DIR, 'frontend', 'build', 'static')}),
-    ]
+    # Django Admin
+    path("admin/", admin.site.urls),
 
+    # API
+    path("api/", include("api.urls")),
+]
+
+# Serve static & media during development
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+# Catch-all: serve React frontend
 urlpatterns += [
-    re_path(r'^(?P<path>.*)$', serve, {'document_root': os.path.join(settings.BASE_DIR, 'frontend', 'build')}),
+    re_path(r"^(?:.*)/?$", TemplateView.as_view(template_name="index.html")),
 ]

@@ -2,13 +2,14 @@ import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "../css/News.css";
+import BASE_URL from "../config"; 
 
 const News = () => {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/news/") // pls Theo di ko alam if tama endpoint
+    fetch(`${BASE_URL}/api/news/`)
       .then((response) => response.json())
       .then((data) => {
         setArticles(data);
