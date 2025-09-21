@@ -1,3 +1,4 @@
+// College.jsx
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -10,8 +11,8 @@ const College = () => {
       <div className="container mt-4 mb-5">
         <h1 className="program-category text-center">College</h1>
         <p className="text-center mb-3">
-          Our College programs equip students with the knowledge and skills needed to succeed in their chosen fields. 
-          Through innovative teaching, hands-on learning, and real-world experiences, 
+          Our College programs equip students with the knowledge and skills needed to succeed in their chosen fields.
+          Through innovative teaching, hands-on learning, and real-world experiences,
           we shape graduates who are ready to lead and make an impact.
         </p>
 
@@ -31,7 +32,7 @@ const College = () => {
             <div className="col-md-4 mb-4" key={index}>
               <div className="card program-card h-100 shadow-sm text-center">
                 <img
-                  src={program.img}
+                  src={process.env.PUBLIC_URL + program.img}
                   className="card-img-top program-img"
                   alt={program.title}
                 />

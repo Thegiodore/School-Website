@@ -1,3 +1,4 @@
+// BasicEducation.jsx
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -21,7 +22,7 @@ const BasicEducation = () => {
           <div className="col-md-4 mb-4">
             <div className="card program-card h-100 shadow-sm text-center">
               <img
-                src="/elementary.jpg"
+                src={process.env.PUBLIC_URL + "/elementary.jpg"}
                 className="card-img-top program-img"
                 alt="Elementary"
               />
@@ -38,7 +39,7 @@ const BasicEducation = () => {
           <div className="col-md-4 mb-4">
             <div className="card program-card h-100 shadow-sm text-center">
               <img
-                src="/juniorhigh.jpg"
+                src={process.env.PUBLIC_URL + "/juniorhigh.jpg"}
                 className="card-img-top program-img"
                 alt="Junior High"
               />
@@ -55,7 +56,7 @@ const BasicEducation = () => {
           <div className="col-md-4 mb-4">
             <div className="card program-card h-100 shadow-sm text-center">
               <img
-                src="/seniorhigh.jpg"
+                src={process.env.PUBLIC_URL + "/seniorhigh.jpg"}
                 className="card-img-top program-img"
                 alt="Senior High"
               />

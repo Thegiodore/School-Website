@@ -18,7 +18,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "frontend", "build", "static"),
-    os.path.join(BASE_DIR, "frontend", "build"),
 ]
 
 # Quick-start development settings - unsuitable for production
@@ -36,6 +35,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -122,6 +122,8 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
+STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'

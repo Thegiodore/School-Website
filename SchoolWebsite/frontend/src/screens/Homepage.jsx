@@ -1,3 +1,4 @@
+// Homepage.jsx
 import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -22,7 +23,7 @@ const Homepage = () => {
 
       <div className="hero-section"> {/*for video*/}
         <video autoPlay loop muted playsInline className="hero-video">
-          <source src="/TheoryUniversityVideo.mp4" type="video/mp4" />
+          <source src={process.env.PUBLIC_URL + "/TheoryUniversityVideo.mp4"} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
@@ -53,7 +54,7 @@ const Homepage = () => {
           <div className="programs-container">
             <div className="program-card">
               <div className="program-image">
-                <img src="/basiceducation.jpg" alt="Basic Education" />
+                <img src={process.env.PUBLIC_URL + "/basiceducation.jpg"} alt="Basic Education" />
               </div>
               <h3 className="academic-programs">BASIC EDUCATION</h3>
               <a href="/basic-education" className="program-link">
@@ -63,7 +64,7 @@ const Homepage = () => {
 
             <div className="program-card">
               <div className="program-image">
-                <img src="/college.jpg" alt="College" />
+                <img src={process.env.PUBLIC_URL + "/college.jpg"} alt="College" />
               </div>
               <h3 className="academic-programs">COLLEGE</h3>
               <a href="/college" className="program-link">
@@ -73,7 +74,7 @@ const Homepage = () => {
 
             <div className="program-card">
               <div className="program-image">
-                <img src="/graduateschool.jpg" alt="Graduate School" />
+                <img src={process.env.PUBLIC_URL + "/graduateschool.jpg"} alt="Graduate School" />
               </div>
               <h3 className="academic-programs">GRADUATE SCHOOL</h3>
               <a href="/graduate-school" className="program-link">
@@ -99,7 +100,7 @@ const Homepage = () => {
             <div className="carousel-inner">
               <div className="carousel-item active">
                 <img
-                  src="/sports.jpg"
+                  src={process.env.PUBLIC_URL + "/sports.jpg"}
                   className="d-block w-100 carousel-img"
                   alt="Sports"
                 />
@@ -111,7 +112,7 @@ const Homepage = () => {
 
               <div className="carousel-item">
                 <img
-                  src="/facilities.jpg"
+                  src={process.env.PUBLIC_URL + "/facilities.jpg"}
                   className="d-block w-100 carousel-img"
                   alt="Campus Facilities"
                 />
@@ -123,7 +124,7 @@ const Homepage = () => {
 
               <div className="carousel-item">
                 <img
-                  src="/outreach.jpg"
+                  src={process.env.PUBLIC_URL + "/outreach.jpg"}
                   className="d-block w-100 carousel-img"
                   alt="Outreach Programs"
                 />

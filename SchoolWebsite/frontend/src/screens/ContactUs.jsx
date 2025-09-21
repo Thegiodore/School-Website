@@ -1,3 +1,4 @@
+// ContactUs.jsx
 import React, { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -25,8 +26,8 @@ const ContactUs = () => {
     setStatus("Sending...");
 
     {/* need to know ano yung exact endpoint */}
-    try { 
-      const response = await fetch("http://127.0.0.1:8000/contact/", { 
+    try {
+      const response = await fetch("http://127.0.0.1:8000/contact/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -138,7 +139,7 @@ const ContactUs = () => {
         <h4 className="contact-subtitle">
           How to get here?
         </h4>
-        <img src="/TheoryUnivMap.jpg" alt="University Location Map" className="contact-map" />
+        <img src={process.env.PUBLIC_URL + "/TheoryUnivMap.jpg"} alt="University Location Map" className="contact-map" />
       </div>
       <Footer />
     </div>
