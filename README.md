@@ -1,5 +1,5 @@
-# School-Website
-A sample design of a School Website  
+# School-Website [Theory University]
+A sample design of a school website built with React and Django using Bootstrap showcasing homepage, school news, and other student-focused sections. 
 
 Using:  
 Framework - Django REST  
@@ -12,7 +12,3 @@ npm install
 npm install react@18 react-dom@18
 npm install bootstrap
 
-added contact_form in API
-need to create 2 gmails (receiver and sender) for settings.py under main app (SchoolWebsite)
-
-added news page
