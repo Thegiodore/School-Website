@@ -172,7 +172,7 @@ const Homepage = () => {
                 <div className="news-card h-100 shadow-sm">
                   {article.image && (
                     <img
-                      src={`http://127.0.0.1:8000${article.image}`}
+                      src={article.image}
                       className="card-img-top"
                       alt={article.title}
                     />

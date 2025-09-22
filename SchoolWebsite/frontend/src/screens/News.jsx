@@ -41,7 +41,7 @@ const News = () => {
                 <div className="card news-card shadow-sm h-100">
                   {article.image && (
                     <img
-                      src={`http://localhost:8000${article.image}`}
+                      src={article.image}
                       alt={article.title}
                       className="card-img-top news-img"
                     />
