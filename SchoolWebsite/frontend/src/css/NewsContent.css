@@ -4,10 +4,12 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* dim background */
+  background: rgba(0, 0, 0, 0.5); /* dim background of modal */
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 80px; /* space below header */
+  padding-bottom: 30px; /* reduce bottom empty space */
   z-index: 1050;
 }
 
@@ -50,4 +52,14 @@
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 15px;
+}
+
+.drawer-title {
+  font-family: 'Graduate', serif;
+  font-size: 1.5rem;
+  color: #151655;
+}
+
+.drawer-text {
+    text-align: justify;
 }
