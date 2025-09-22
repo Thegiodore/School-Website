@@ -166,10 +166,10 @@ const Homepage = () => {
             is always buzzing with activity!
           </p>
 
-          <div className="row">
+          <div className="row justify-content-center">
             {news.map((article) => (
               <div className="col-md-4 mb-4" key={article.id}>
-                <div className="news-card h-100 shadow-sm">
+                <div className="news-card h-100 w-100 shadow-sm">
                   {article.image && (
                     <img
                       src={article.image}
@@ -195,7 +195,7 @@ const Homepage = () => {
             ))}
           </div>
 
-          <div className="text-center mt-3 mb-3">
+          <div className="text-center mt-1 mb-3">
             <Link to="/news" className="btn btn-primary rounded-pill">
               More News →
             </Link>

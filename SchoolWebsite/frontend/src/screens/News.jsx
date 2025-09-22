@@ -35,10 +35,10 @@ const News = () => {
         ) : articles.length === 0 ? (
           <p className="text-center">No news articles available.</p>
         ) : (
-          <div className="row">
+          <div className="row justify-content-center">
             {articles.map((article) => (
-              <div className="col-md-4 mb-4" key={article.id}>
-                <div className="card news-card shadow-sm h-100">
+              <div className="col-md-4 mb-4 d-flex" key={article.id}>
+                <div className="card news-card shadow-sm h-100 w-100">
                   {article.image && (
                     <img
                       src={article.image}
