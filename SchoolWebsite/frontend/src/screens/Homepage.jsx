@@ -169,7 +169,7 @@ const Homepage = () => {
           <div className="row justify-content-center">
             {news.map((article) => (
               <div className="col-md-4 mb-4" key={article.id}>
-                <Link to="/news">
+                <Link to="/news" style={{ textDecoration: "none", color: "inherit" }}>
                 <div className="news-card h-100 w-100 shadow-sm">
                   {article.image && (
                     <img
