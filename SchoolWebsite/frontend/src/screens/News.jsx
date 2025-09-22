@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import NewsContent from "../components/NewsContent";
 import "../css/News.css";
-import BASE_URL from "../config"; 
+import BASE_URL from "../config";
 
 const News = () => {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [selectedArticle, setSelectedArticle] = useState(null);
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   useEffect(() => {
     fetch(`${BASE_URL}/api/news/`)
@@ -20,6 +23,16 @@ const News = () => {
         setLoading(false);
       });
   }, []);
+
+  const handleCardClick = (article) => {
+    setSelectedArticle(article);
+    setIsDrawerOpen(true);
+  };
+
+  const handleClose = () => {
+    setIsDrawerOpen(false);
+    setSelectedArticle(null);
+  };
 
   return (
     <div>
@@ -37,7 +50,12 @@ const News = () => {
         ) : (
           <div className="row justify-content-center">
             {articles.map((article) => (
-              <div className="col-md-4 mb-4 d-flex" key={article.id}>
+              <div
+                className="col-md-4 mb-4 d-flex"
+                key={article.id}
+                onClick={() => handleCardClick(article)} // open drawer on click
+                style={{ cursor: "pointer" }}
+              >
                 <div className="card news-card shadow-sm h-100 w-100">
                   {article.image && (
                     <img
@@ -47,7 +65,7 @@ const News = () => {
                     />
                   )}
                   <div className="card-body">
-                    <h5 className="card-title">{article.title}</h5>
+                    <h5 className="card-title text-center">{article.title}</h5>
                     <p className="card-text">
                       {article.content.length > 120
                         ? article.content.substring(0, 120) + "..."
@@ -63,6 +81,14 @@ const News = () => {
           </div>
         )}
       </div>
+
+      {/*drawer in right*/}
+      <NewsContent
+        article={selectedArticle}
+        isOpen={isDrawerOpen}
+        onClose={handleClose}
+      />
+
       <Footer />
     </div>
   );

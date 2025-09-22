@@ -178,7 +178,7 @@ const Homepage = () => {
                     />
                   )}
                   <div className="news-card-body">
-                    <h5 className="card-title">{article.title}</h5>
+                    <h5 className="card-title text-center">{article.title}</h5>
                     <p className="card-text">
                       {article.content.length > 100
                         ? article.content.slice(0, 100) + "..."
